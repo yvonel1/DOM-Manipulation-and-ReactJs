@@ -1,0 +1,30 @@
+const headerTitle = document.getElementById("main-heading");
+headerTitle.textContent =  "New DOM Layout";
+headerTitle.classList.add("bg-success");
+const para1 = document.getElementById("para1");
+para1.textContent = "The Document Object Model (DOM) is a cross-platform and language-independent interface that treats an XML or HTML document as a tree structure.";
+const para2 = document.getElementById("para2");
+para2.textContent = "The Document Object Model (DOM) is a programming interface for HTML and XML documents. It represents the page so that programs can change the document structure, style, and content. The DOM represents the document as nodes and objects. That way, programming languages can connect to the page.";
+const clickMe = document.getElementById("btn");
+const para4 = document.getElementById("para4");
+clickMe.addEventListener("click", () => {
+    const newP = document.createElement("p");
+    const node = document.createTextNode("The Document Object Model is a cross-platform and language-independent interface that treats an XML or HTML document as a tree structure wherein each node is an object representing a part of the document.");
+    newP.appendChild(node);
+    para4.appendChild(newP);
+})
+const redB = document.getElementById("red");
+redB.classList.remove("bg-white");
+redB.classList.add("bg-danger");
+const blueB = document.getElementById("blue");
+blueB.classList.remove("bg-white");
+blueB.classList.add("bg-primary");
+const yellowB = document.getElementById("yellow");
+yellowB.classList.remove("bg-white");
+yellowB.classList.add("bg-warning");
+const greenB = document.getElementById("green");
+greenB.classList.remove("bg-white");
+greenB.classList.add("bg-success");
+const blackB = document.getElementById("black");
+blackB.classList.remove("bg-white");
+blackB.classList.add("bg-dark");
